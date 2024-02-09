@@ -5,12 +5,7 @@ const apiKey = "61ce56466215e18a6a259c6f5eb330d5";
 
 class GeoLocation {
   static async get4NearlyPlaces(lat, lon) {
-    /*fetch(`http://api.geonames.org/findNearbyPlaceNameJSON?lat=${lat}&lng=${lon}&cities=cities5000&radius=30&username=black_foxi`)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));*/
-
-    let fetchedData;
+  let fetchedData;
   try {
       const response = await fetch(`http://api.geonames.org/findNearbyPlaceNameJSON?lat=${lat}&lng=${lon}&cities=cities5000&radius=30&username=black_foxi`);
       fetchedData = await response.json();
